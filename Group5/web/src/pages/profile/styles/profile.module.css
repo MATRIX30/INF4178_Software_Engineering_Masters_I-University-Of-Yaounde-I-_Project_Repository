@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+  width: 30%; 
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.profileContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .profilImage{
+  object-fit: contain;
+} */
+/* .image{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 30px;
+} */
+.profileDesc{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.username{
+  font-family: "PoppinsBold", sans-serif;
+  color: #333;
+  font-size: 22px;
+}
+
+.userRole{
+  font-size: 14px;
+  color: gray;
+}
+
+.infoContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  padding: 15px 0px 15px 35px;
+  border-top: 1px solid rgb(212, 211, 211);
+  border-bottom: 1px solid rgb(212, 211, 211);
+  cursor: pointer;
+  transition: background-color .15s ease-in;
+}
+
+
+.connexion {
+  display: flex;
+  padding: 15px 0px 15px 35px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-items: center;
+}
+
+.infoContent span, .connexion span{
+  margin-left: 20px;
+}
+  
+.infoContent:hover, .connexion:hover {
+  background-color: #F5F5F5;
+}
