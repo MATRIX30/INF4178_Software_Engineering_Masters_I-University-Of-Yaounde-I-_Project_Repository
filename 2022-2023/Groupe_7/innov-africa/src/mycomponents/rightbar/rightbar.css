@@ -1,0 +1,135 @@
+.rightbar {
+  width: 25%;
+  border-radius: 20px !important;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  height: calc(100vh - 50px);
+}
+
+@media screen and (max-width: 991px) {
+  .rightbar {
+    display: none !important;
+  }
+}
+
+.rightbarWrapper {
+  padding: 20px 20px 0 0;
+  border-radius: 20px !important;
+  background-color: rgb(255, 255, 255);
+}
+
+.birthdayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.birthdayImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.birthdayText {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.rightbarAd {
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.rightbarTitle {
+  margin-bottom: 20px;
+}
+
+.rightbarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightbarTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.rightbarInfo {
+  margin-bottom: 30px;
+}
+
+.rightbarInfoItem {
+  margin-bottom: 10px;
+}
+
+.rightbarInfoKey {
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
+}
+
+.rightbarInfoValue {
+  font-weight: 300;
+}
+
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.rightbarFollowingImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.rightbarFollowButton {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #1872f2;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rightbarFollowButton:focus {
+  outline: none;
+}
+
+.divgift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  flex-direction: column;
+  border: solid 2px rgb(233, 233, 233);
+  box-shadow: 0px 0px 1px 1px rgb(233, 233, 233);
+  margin-left: 20px;
+  border-radius: 5px;
+}
+.giftimg {
+  width: 50%;
+}
