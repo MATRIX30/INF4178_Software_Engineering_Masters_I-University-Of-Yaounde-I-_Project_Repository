@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Quick Care",
+    "slug": "quickcare",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "quickcare",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#EE1F82"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#EE1F82"
+      },
+      "package": "com.dilane3.quickcare",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBPcusy4zcesfmcdWmjgXg70w_So0AuuDI"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b33d36d9-0fc4-482c-bb1b-bb4bc17bdcd9"
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow QuickCare to use your location."
+        }
+      ]
+    ]
+  }
+}
