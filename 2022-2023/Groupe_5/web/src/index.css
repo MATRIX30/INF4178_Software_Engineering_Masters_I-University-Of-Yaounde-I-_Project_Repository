@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("assets/fonts/Poppins-Medium.ttf");
+}
+
+:root {
+  font-family: "PoppinsRegular", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(26, 26, 26, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Colors */
+  --primary-color: #EE1F82;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 5000px rgba(112, 112, 112, 0.5);
+}
+
+button:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed !important;
+}
+
+button:disabled:hover {
+  box-shadow: none !important;
+}

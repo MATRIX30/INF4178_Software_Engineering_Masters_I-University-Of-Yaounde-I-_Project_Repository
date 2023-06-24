@@ -1,0 +1,92 @@
+.container{
+	padding: 0px 20px 20px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.hospitalContainer{
+	display: flex;
+	justify-content: space-between;
+}
+h3{
+	font-size: 24px;
+	text-align: center;
+  	font-family: "PoppinsBold", sans-serif;
+}
+.form_labels{
+	font-size: 0.8rem;
+	font-size: 14px;
+	margin-bottom: 6px;
+	display: inline-block;
+	width: 100%;
+
+}
+.form_inputs{
+	margin-bottom: 0.5rem;
+}
+.inputs,.select_input{
+	padding-left: 5px;
+	display: block;
+	border: 1px solid gray;
+	outline: none;
+	height: 30px;
+	border-radius: 5px;
+	width: 100%;
+}
+/* .select_input{
+	padding-left: 5px;
+	 display: block;
+	border: 1px solid gray;
+	outline: none;
+	height: 35px; 
+	 border-radius: 5px;
+	background-color: #ffff;
+ */
+
+option::placeholder{
+	color: #595959;
+	font-size: 14px;
+}
+.inputs::placeholder{
+	color: #595959;
+	font-size: 14px;
+}
+.buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 20px;
+	width: 100%;
+}
+.imageContent{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 19em;
+	border: 2px dashed #1475cf;
+	border-radius: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.buttonUpload{
+	height: 30px;
+	width: 130px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 6px;
+	color: #ffff;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #1475cf;
+	text-align: center;
+}
+.formContentInformation{
+	overflow-y: scroll;
+	max-height: 60vh;
+	padding-right: 20px;
+	width: 45%;
+
+}
