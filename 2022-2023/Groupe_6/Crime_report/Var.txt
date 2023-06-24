@@ -1,0 +1,9 @@
+-    pays
+-    ville
+-    quartier
+-    type_crime
+-    nbre_victime
+-    gravité
+-    image
+-    message
+-    description
