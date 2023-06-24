@@ -1,0 +1,135 @@
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import Icon from "@mui/material/Icon";
+import MuiLink from "@mui/material/Link";
+import { ArrowRightAltOutlined } from "@material-ui/icons";
+import Box from "../Box/Box";
+import CustomTypography from "../typography/CustomTypography";
+
+function FilledInfoCard({ variant, color, icon, title, description, action }) {
+  const buttonStyles = {
+    width: "max-content",
+    display: "flex",
+    alignItems: "center",
+
+    "& .material-icons-round": {
+      fontSize: "1.125rem",
+      transform: `translateX(3px)`,
+      transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+    },
+
+    "&:hover .material-icons-round, &:focus .material-icons-round": {
+      transform: `translateX(6px)`,
+    },
+  };
+
+  let iconColor = color;
+
+  if (variant === "gradient" && color !== "light") {
+    iconColor = "white";
+  } else if (variant === "gradient" && color === "light") {
+    iconColor = "dark";
+  }
+
+  return (
+    <Box
+      display={{ xs: "block", md: "flex" }}
+      variant={variant}
+      bgColor={variant === "contained" ? "grey-100" : color}
+      borderRadius="xl"
+      pt={3.5}
+      pb={3}
+      px={3}
+    >
+      <CustomTypography
+        display="block"
+        variant="h3"
+        color={iconColor}
+        textGradient={variant === "contained"}
+        mt={-0.625}
+      >
+        {typeof icon === "string" ? <Icon>{icon}</Icon> : icon}
+      </CustomTypography>
+      <Box pt={{ xs: 3, md: 0 }} pl={{ xs: 0, md: 2 }} lineHeight={1}>
+        <CustomTypography
+          display="block"
+          variant="5"
+          color={variant === "contained" || color === "light" ? "dark" : "white"}
+          fontWeight="bold"
+          mb={1}
+        >
+          {title}
+        </CustomTypography>
+        <CustomTypography
+          display="block"
+          variant="body2"
+          color={variant === "contained" || color === "light" ? "text" : "white"}
+          mb={2}
+        >
+          {description}
+        </CustomTypography>
+        {action && action.type === "external" ? (
+          <CustomTypography
+            component={MuiLink}
+            href={action.route}
+            target="_blank"
+            rel="noreferrer"
+            variant="body2"
+            fontWeight="regular"
+            color={variant === "contained" ? color : "white"}
+            sx={buttonStyles}
+          >
+            {action.label} <ArrowRightAltOutlined style={{ fontWeight: "bold" }} />
+          </CustomTypography>
+        ) : null}
+        {action && action.type === "internal" ? (
+          <CustomTypography
+            component={Link}
+            to={action.route}
+            variant="body2"
+            fontWeight="regular"
+            color={variant === "contained" ? color : "white"}
+            sx={buttonStyles}
+          >
+            {action.label} <ArrowRightAltOutlined style={{ fontWeight: "bold" }} />
+          </CustomTypography>
+        ) : null}
+      </Box>
+    </Box>
+  );
+}
+
+// Setting default props for the FilledInfoCard
+FilledInfoCard.defaultProps = {
+  variant: "contained",
+  color: "success",
+  action: false,
+};
+
+// Typechecking props for the FilledInfoCard
+FilledInfoCard.propTypes = {
+  variant: PropTypes.oneOf(["contained", "gradient"]),
+  color: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "light",
+    "dark",
+  ]),
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  action: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      type: PropTypes.oneOf(["external", "internal"]).isRequired,
+      route: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ]),
+};
+
+export default FilledInfoCard;
