@@ -1,1 +1,0 @@
-export * from './hospital-types.repersitory'
